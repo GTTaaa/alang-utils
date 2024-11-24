@@ -14,7 +14,7 @@ export class Storage {
     return `${this.prefix}${key}`
   }
 
-  set(key: string, value: any, expire?: number): void {
+  set(key: string, value: unknown, expire?: number): void {
     const data = {
       value,
       expire: expire ? Date.now() + expire : null
