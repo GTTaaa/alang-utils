@@ -1,25 +1,5 @@
-import { describe, expect, it, beforeEach, vi } from 'vitest'
+import { describe, expect, it, beforeEach } from 'vitest'
 import { Storage } from '../utils/storage/storage'
-
-// // 模拟 localStorage
-// const localStorageMock = (() => {
-//   let store: Record<string, string> = {}
-//   return {
-//     getItem: vi.fn((key: string) => store[key] || null),
-//     setItem: vi.fn((key: string, value: string) => {
-//       store[key] = value.toString()
-//     }),
-//     removeItem: vi.fn((key: string) => {
-//       delete store[key]
-//     }),
-//     clear: vi.fn(() => {
-//       store = {}
-//     })
-//   }
-// })()
-
-// // 全局设置 localStorage
-// vi.stubGlobal('localStorage', localStorageMock)
 
 describe('Storage', () => {
   let storage: Storage

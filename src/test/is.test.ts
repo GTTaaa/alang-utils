@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { isString, isNumber, isObject, isEmpty, isArray, is } from '../utils/is/is'
+import { isString, isEmpty, is } from '../utils/is/is'
 
 describe('is utils', () => {
   describe('is', () => {
