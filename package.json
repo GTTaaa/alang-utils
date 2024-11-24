@@ -10,14 +10,15 @@
   ],
   "scripts": {
     "dev": "rollup -c -w --bundleConfigAsCjs",
-    "build": "rollup -c",
+    "build": "NODE_ENV=production rollup -c --bundleConfigAsCjs",
     "test": "vitest",
     "coverage": "vitest run --coverage",
     "lint": "eslint src --ext .ts",
     "format": "prettier --write \"src/**/*.ts\"",
     "prepare": "husky install",
     "clean": "rimraf dist",
-    "prebuild": "pnpm run clean"
+    "prebuild": "pnpm run clean",
+    "prepublishOnly": "pnpm run lint && pnpm run test && pnpm run build"
   },
   "publishConfig": {
     "access": "public",
@@ -43,6 +44,7 @@
     "@rollup/plugin-node-resolve": "^15.3.0",
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^12.1.1",
+    "@types/node": "^22.9.3",
     "@typescript-eslint/eslint-plugin": "^7.0.0",
     "@typescript-eslint/parser": "^7.0.0",
     "@vitest/coverage-v8": "^1.3.1",
