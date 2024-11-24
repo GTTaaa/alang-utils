@@ -1,4 +1,2 @@
-// src/index.ts
-export function add(a: number, b: number): number {
-  return a + b;
-}
+export * from './utils/is/is'
+export * from './utils/storage/storage'
