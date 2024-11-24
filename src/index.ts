@@ -1,2 +1,2 @@
-export * from './utils/is'
-export * from './utils/storage'
+export * from './utils/is/is'
+export * from './utils/storage/storage'
